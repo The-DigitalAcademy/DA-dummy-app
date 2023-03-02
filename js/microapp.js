@@ -117,7 +117,7 @@ function finish() {
 function startPayment() {
     var pm = document.getElementById("pm").value;
     var currency = document.getElementById("currency").value;
-    var amount = parseInt(document.getElementById("amount").value);
+    var amount = parseFloat(document.getElementById("amount").value);
     var description = document.getElementById("description").value;
 
     console.log(pm, amount, currency, description);
