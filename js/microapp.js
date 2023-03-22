@@ -124,6 +124,20 @@ function startPayment() {
 
     Ayoba.startPayment(pm, amount, currency, description);
 }
+
+
+function startPaymentOverlay() {
+    var pm = document.getElementById("pm").value;
+    var currency = document.getElementById("currency").value;
+    var amount = parseFloat(document.getElementById("amount").value);
+    var description = document.getElementById("description").value;
+
+    console.log(pm, amount, currency, description);
+
+    Ayoba.startPayment(amount, currency, description);
+}
+
+
 function onPaymentStatusChanged(transactionId, status, error) {
     let res = `Transaction ID:  ${transactionId}  Status:  ${status} Error: ${error} `;
      document.getElementById("txtPaymentStatusChanged").textContent = res;
